@@ -25,10 +25,10 @@ import Delete from '../../../assets/icons/delete';
 import Update from '../../../assets/icons/update';
 
 const MainHeader = props => {
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState({});
 
   const doneHandler = value => {
-    setDone(value);
+    setDone({...done, ...value});
     ToastAndroid.show('Done ....👏', ToastAndroid.SHORT);
   };
 
@@ -37,7 +37,7 @@ const MainHeader = props => {
   return (
     <View style={styles.container}>
       <View style={styles.tasksWrapper}>
-        <Text style={styles.title}>TODO LIST</Text>
+        <Text style={styles.title}>Create your To-Do list</Text>
       </View>
 
       <View style={styles.addContainer}>
@@ -56,9 +56,7 @@ const MainHeader = props => {
                 <Text style={styles.text}>{item.title}</Text>
               </View>
               <View style={styles.timeContainer}>
-                <Text style={styles.time}>
-                  {format(new Date(item.time), ' dd/MM/yyyy , p')}
-                </Text>
+                <Text style={styles.time}>{item.time}</Text>
               </View>
 
               <View style={styles.rightContainer}>
@@ -106,22 +104,3 @@ const MainHeader = props => {
 };
 
 export default MainHeader;
-
-// const checkboxHandler = value => {
-//   // console.log('value>>>', props.data[value - 1].id);
-//   // if (value === props.data[value - 1].id) {
-//   //   setToggleCheckBox(true);
-//   // } else {
-//   //   setToggleCheckBox(false);
-//   // }
-//   // if (value === true) {
-//   //   ToastAndroid.show('DONE.....👏', ToastAndroid.SHORT);
-//   // } else {
-//   //   null;
-//   // }
-//   // if (item.id === value.id) {
-//   //   toggleCheckBox(true);
-//   // } else {
-//   //   toggleCheckBox(false);
-//   // }
-// };

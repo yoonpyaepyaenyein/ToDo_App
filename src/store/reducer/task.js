@@ -6,6 +6,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    //Add Task
     case ADD_TASK:
       let newData = action.addTask;
 
@@ -16,13 +17,15 @@ export default (state = initialState, action) => {
         title: newData.title,
         time: newData.time,
       };
-      console.log('newTask:::', newTask);
       updateTasks = [...state.tasks, newTask];
 
       return {...state, tasks: updateTasks};
 
+    //Update Task
     case UPDATE_TASK:
       const currentData = action.updateTask;
+      // const currentTime = new Date().toLocaleString();
+
       let prodIndex = state.tasks.findIndex(item => item.id === currentData.id);
 
       const updateTask = [...state.tasks];
@@ -31,8 +34,10 @@ export default (state = initialState, action) => {
       return {
         ...state,
         tasks: updateTask,
+        // currentTime,
       };
 
+    //Delete Task
     case DELETE_TASK:
       return {
         ...state,

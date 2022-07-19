@@ -7,6 +7,7 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
+import {widthPercentageToDP} from 'react-native-responsive-screen';
 
 //Style
 import styles from './style';

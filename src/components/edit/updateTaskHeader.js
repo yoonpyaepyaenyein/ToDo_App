@@ -10,6 +10,13 @@ import {
 
 //Style
 import styles from './style';
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
+
+//Component
+import Confirm from '../../../assets/icons/confirm';
 
 const UpdateTaskHeader = props => {
   return (
@@ -31,7 +38,9 @@ const UpdateTaskHeader = props => {
             style={styles.addTaskBtn}
             onPress={props.updateTaskAction}>
             <View style={styles.addWrapper}>
-              <Text style={styles.addText}>+</Text>
+              <Text style={styles.addText}>
+                <Confirm width={hp(3.1)} height={hp(3.1)} />
+              </Text>
             </View>
           </TouchableOpacity>
 

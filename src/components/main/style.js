@@ -15,13 +15,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: hp(4.3),
+    fontSize: hp(3),
     fontWeight: 'bold',
     color: '#34B5FF',
   },
 
   addContainer: {
-    marginTop: wp(10),
+    marginTop: wp(9),
   },
 
   addTitle: {
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
 
   item: {
-    padding: 13.6,
+    padding: 13,
     borderRadius: 10,
     flexDirection: 'row',
     alignItems: 'center',
@@ -128,11 +128,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: wp(2),
   },
   timeContainer: {
-    marginTop: hp(7.3),
-    marginLeft: hp(-10),
+    marginTop: hp(7.1),
+    marginLeft: hp(-14),
   },
   time: {
     color: '#585858',
+    // paddingRight: wp(3.5),
+    // padding: wp(2),
   },
 });
 

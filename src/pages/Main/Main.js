@@ -32,12 +32,10 @@ const Main = ({navigation}) => {
     }
     return updateTaskList;
   });
-  console.log(taskList);
 
   //Update Task
 
   const updateTaskHandler = value => {
-    console.log('val>>>', value);
     navigation.navigate('UpdateTask', {data: value});
   };
 
@@ -54,7 +52,6 @@ const Main = ({navigation}) => {
         data={taskList}
         updateTaskAction={updateTaskHandler}
         deleteTaskAction={deleteTaskHandler}
-        // doneAction={doneHandler}
       />
     </View>
   );
