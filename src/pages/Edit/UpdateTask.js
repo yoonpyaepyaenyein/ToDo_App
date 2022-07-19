@@ -43,9 +43,6 @@ const UpdateTask = ({navigation, route}) => {
   const handleConfirm = data => {
     setFormatted(FormatDate(data));
     setModalVisible(false);
-    // setDatePickerVisibility({dateAndTime: dateAndTime.toString()});
-    // console.log('A date has been picked: ', dateAndTime);
-    // hideDatePicker();
   };
 
   const FormatDate = data => {

@@ -28,6 +28,9 @@ const AddTask = ({navigation}) => {
       title: title,
       time: Formatted,
     };
+    if (data.title === '' && data.time === '') {
+      return navigation.goBack();
+    }
     dispatch(actionTasks.addTasks(data));
     navigation.goBack();
     ToastAndroid.show('Task Added Successfully', ToastAndroid.SHORT);
